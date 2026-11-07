@@ -1,0 +1,126 @@
+{
+  "bar": {
+    "centerAnchor": "omarchy.clock",
+    "layout": {
+      "center": [
+        {
+          "id": "omarchy.indicators"
+        },
+        {
+          "format": "dddd HH:mm",
+          "formatAlt": "d MMMM 'W'ww yyyy",
+          "id": "omarchy.clock",
+          "verticalFormat": "HH\n—\nmm"
+        },
+        {
+          "id": "modib.activity-monitor",
+          "mode": "compact"
+        },
+        {
+          "id": "omarchy.system-update"
+        },
+        {
+          "id": "quickshell.spotify",
+          "showTrackTitle": "Off"
+        },
+        {
+          "id": "io.github.ricky.whatsapp"
+        },
+        {
+          "id": "twistedvis.model-switcher"
+        }
+      ],
+      "left": [
+        {
+          "id": "omarchy.menu"
+        },
+        {
+          "id": "crmne.mpris",
+          "adaptiveLayout": true,
+          "albumArtSize": 20,
+          "maxCharacters": 24,
+          "maxLabelWidth": 130,
+          "showAlbumArt": true,
+          "showControls": true,
+          "showVisualizer": true,
+          "showArtist": false
+        },
+        {
+          "id": "better-workspaces",
+          "maxIcons": 3,
+          "iconSize": 11
+        }
+      ],
+      "right": [
+        {
+          "id": "omarchy.tray"
+        },
+        {
+          "id": "omamail"
+        },
+        {
+          "id": "io.github.ef-code.wallpaper-explorer"
+        },
+        {
+          "id": "io.github.l1qu1d.themertoggle"
+        },
+        {
+          "id": "omarchy.bluetooth"
+        },
+        {
+          "id": "omarchy.network"
+        },
+        {
+          "id": "omarchy.audio"
+        },
+        {
+          "id": "omarchy.monitor"
+        },
+        {
+          "id": "omarchy.power"
+        }
+      ]
+    },
+    "position": "top",
+    "transparent": false
+  },
+  "idle": {
+    "lock": 300,
+    "screensaver": 150
+  },
+  "plugins": [
+    {
+      "id": "io.github.maajix.spotlight"
+    },
+    {
+      "id": "io.github.sh3nron.aura-blur"
+    },
+    {
+      "id": "alanfortlink.clipboard"
+    },
+    {
+      "id": "io.github.sirjul1337.lock-explorer"
+    },
+    {
+      "id": "b.okomart"
+    },
+    {
+      "id": "io.github.pablo-merino.altswitch"
+    },
+    {
+      "id": "taxin.cursor-style"
+    }
+  ],
+  "version": 1,
+  "disabledPlugins": [
+    "omarchy.clipboard",
+    "omarchy.disk-speedtest",
+    "omarchy.nightlight",
+    "omarchy.reminders",
+    "omarchy.lock"
+  ],
+  "cloneSourceRestores": [
+    "alanfortlink.clipboard",
+    "io.github.sirjul1337.lock-explorer"
+  ]
+}

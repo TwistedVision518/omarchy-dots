@@ -1,0 +1,9 @@
+{
+  "repo_type": "bare",
+  "git_dir": "/home/twistedvis/.dotfiles",
+  "work_tree": "/home/twistedvis",
+  "auto_add_omarchy": true,
+  "default_remote": "origin",
+  "default_branch": "main",
+  "remote_url": "https://github.com/TwistedVision518/omarchy-dots"
+}

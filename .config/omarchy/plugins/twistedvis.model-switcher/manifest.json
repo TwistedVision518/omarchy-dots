@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/omarchy/omarchy/main/schemas/plugin.json",
+  "schemaVersion": 1,
+  "id": "twistedvis.model-switcher",
+  "name": "Agent and Model Switcher",
+  "version": "1.0.0",
+  "author": "twistedvis",
+  "license": "MIT",
+  "description": "Switch the default coding agent and model, with local token usage and allowance status.",
+  "kinds": ["bar-widget"],
+  "entryPoints": { "barWidget": "ModelSwitcher.qml" },
+  "barWidget": {
+    "displayName": "Agent and Model Switcher",
+    "description": "Switch the default coding agent and model and inspect local usage.",
+    "category": "AI",
+    "allowMultiple": false,
+    "defaultSection": "left",
+    "defaults": {
+      "models": "copilot:auto,gpt-5.4;codex:gpt-6-astra,gpt-5.6-sol,gpt-5.6-terra,gpt-5.6-luna,gpt-5.5"
+    },
+    "schema": [
+      {
+        "key": "models",
+        "type": "string",
+        "label": "Models",
+        "defaultValue": "copilot:auto,gpt-5.4;codex:gpt-6-astra,gpt-5.6-sol,gpt-5.6-terra,gpt-5.6-luna,gpt-5.5",
+        "description": "Comma-separated model IDs offered by the switcher."
+      }
+    ]
+  }
+}

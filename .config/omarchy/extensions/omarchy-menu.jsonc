@@ -1,0 +1,91 @@
+{
+  // Extend the Quickshell Omarchy menu with JSONC.
+  //
+  // IDs are object keys. The parent is inferred from the dotted id, so
+  // "personal.notes" appears under "personal", and "personal" appears on the
+  // root menu. Reuse an existing id to override/extend it.
+  //
+  // Fields:
+  //   icon        Nerd Font glyph shown in the icon column.
+  //   label       Visible row title.
+  //   action      Shell command to run. If omitted, the row is a submenu.
+  //   target      Existing submenu id to open. Use for links/aliases.
+  //   provider    Runtime provider function/command returning JSON rows.
+  //   aliases     alternate `omarchy menu summon <name>` routes; also searchable.
+  //   description Optional subtitle and extra search text.
+  //   when        Shell condition; hide row when it fails.
+  //   checked     Shell condition; append ✓ when it succeeds.
+  //
+  // Examples:
+  // "personal": {"icon":"","label":"Personal"},
+  // "personal.notes": {"icon":"󰎞","label":"Notes","action":"omarchy-launch-editor ~/notes"},
+  // "personal.files": {"icon":"","label":"Files","action":"uwsm-app -- nautilus ~/Documents"},
+  //
+  // Only use provider when a provider_name function or command named "name"
+  // returns JSON rows. Static submenus only need dotted ids.
+  //
+  // Example: replace the default About action by reusing the same id. Existing
+  // fields are kept unless overridden.
+  // "about": {"icon":"","label":"About","action":"omarchy-launch-or-focus-tui \"zsh -c 'fastfetch; read -k 1'\""},
+  "setup.default.editor.antigravity": {
+    "icon":"∩",
+    "label":"Antigravity",
+    "when":"omarchy-cmd-present antigravity-ide",
+    "checked":"[[ \"$(omarchy-default-editor)\" == \"antigravity-ide\" ]]",
+    "action":"mkdir -p \"$HOME/.local/state/omarchy/defaults\" && printf '%s\\n' antigravity-ide > \"$HOME/.local/state/omarchy/defaults/editor\" && omarchy-notification-send -g ∩ 'Antigravity is now the default editor'"
+  },
+  "system.startup-apps": {
+    "icon":"󰒓",
+    "label":"Startup Apps",
+    "description":"Choose which applications launch at login"
+  },
+  "system.startup-apps.fdm": {
+    "icon":"󰆍",
+    "label":"FDM [ON]",
+    "when":"[[ -e \"$HOME/.config/autostart/FDM.desktop\" ]] && ! grep -qi '^Hidden=true[[:space:]]*$' \"$HOME/.config/autostart/FDM.desktop\"",
+    "action":"omarchy-toggle-startup-apps FDM.desktop"
+  },
+  "system.startup-apps.fdm-disabled": {
+    "icon":"󰆍",
+    "label":"FDM [OFF]",
+    "when":"[[ -e \"$HOME/.config/autostart/FDM.desktop\" ]] && grep -qi '^Hidden=true[[:space:]]*$' \"$HOME/.config/autostart/FDM.desktop\"",
+    "action":"omarchy-toggle-startup-apps FDM.desktop"
+  },
+  "system.startup-apps.print-applet": {
+    "icon":"󰐪",
+    "label":"Print [ON]",
+    "when":"[[ -e \"$HOME/.config/autostart/print-applet.desktop\" ]] && ! grep -qi '^Hidden=true[[:space:]]*$' \"$HOME/.config/autostart/print-applet.desktop\"",
+    "action":"omarchy-toggle-startup-apps print-applet.desktop"
+  },
+  "system.startup-apps.print-applet-disabled": {
+    "icon":"󰐪",
+    "label":"Print [OFF]",
+    "when":"[[ -e \"$HOME/.config/autostart/print-applet.desktop\" ]] && grep -qi '^Hidden=true[[:space:]]*$' \"$HOME/.config/autostart/print-applet.desktop\"",
+    "action":"omarchy-toggle-startup-apps print-applet.desktop"
+  },
+  "system.startup-apps.fcitx": {
+    "icon":"󰌌",
+    "label":"Fcitx5 [ON]",
+    "when":"[[ -e \"$HOME/.config/autostart/org.fcitx.Fcitx5.desktop\" ]] && ! grep -qi '^Hidden=true[[:space:]]*$' \"$HOME/.config/autostart/org.fcitx.Fcitx5.desktop\"",
+    "action":"omarchy-toggle-startup-apps org.fcitx.Fcitx5.desktop"
+  },
+  "system.startup-apps.fcitx-disabled": {
+    "icon":"󰌌",
+    "label":"Fcitx5 [OFF]",
+    "when":"[[ -e \"$HOME/.config/autostart/org.fcitx.Fcitx5.desktop\" ]] && grep -qi '^Hidden=true[[:space:]]*$' \"$HOME/.config/autostart/org.fcitx.Fcitx5.desktop\"",
+    "action":"omarchy-toggle-startup-apps org.fcitx.Fcitx5.desktop"
+  },
+  "system.startup-apps.limine": {
+    "icon":"󰒓",
+    "label":"Limine [ON]",
+    "when":"[[ -e \"$HOME/.config/autostart/limine-snapper-notify.desktop\" ]] && ! grep -qi '^Hidden=true[[:space:]]*$' \"$HOME/.config/autostart/limine-snapper-notify.desktop\"",
+    "action":"omarchy-toggle-startup-apps limine-snapper-notify.desktop"
+  },
+  "system.startup-apps.limine-disabled": {
+    "icon":"󰒓",
+    "label":"Limine [OFF]",
+    "when":"[[ -e \"$HOME/.config/autostart/limine-snapper-notify.desktop\" ]] && grep -qi '^Hidden=true[[:space:]]*$' \"$HOME/.config/autostart/limine-snapper-notify.desktop\"",
+    "action":"omarchy-toggle-startup-apps limine-snapper-notify.desktop"
+  },
+  "style.cursor-style": {"icon":"󰇀","label":"Cursor Style","aliases":["cursor","cursor-picker"],"action":"/home/twistedvis/.config/omarchy/extensions/omarchy-cursor-menu-entry"}
+}

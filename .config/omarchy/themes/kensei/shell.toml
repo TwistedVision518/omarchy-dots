@@ -1,0 +1,133 @@
+# Kensei shell — lacquer surfaces, vermillion focus, brass-edged chrome.
+
+[bar]
+background       = "#0c0a0b"
+background-alpha = 0.82
+text             = "#e8dcc8"
+active           = "#d42b2b"
+scale-with-font  = true
+size-horizontal  = 28
+size-vertical    = 30
+
+[hyprland]
+active-border            = "rgba(d42b2bee) rgba(d4a84bcc) rgba(7a8f9aaa) 48deg"
+active-border-foreground = "rgb(d42b2b) rgb(d4a84b) 48deg"
+
+[controls]
+normal-color        = "#c4b5a0"
+normal-fill-alpha   = 0.05
+normal-border       = "#6b5e58"
+normal-border-width = 0
+normal-border-alpha = 0.0
+
+hover-cursor-color        = "#e8dcc8"
+hover-cursor-fill-alpha   = 0.10
+hover-cursor-border       = "#d4a84b"
+hover-cursor-border-width = 0
+hover-cursor-border-alpha = 0.0
+
+focus-color        = "#f5efe4"
+focus-fill-alpha   = 0.14
+focus-border       = "hyprland.active-border-foreground"
+focus-border-width = 1
+focus-border-alpha = 0.75
+
+selected-color        = "#f5efe4"
+selected-fill-alpha   = 0.18
+selected-border       = "#d42b2b"
+selected-border-width = "0 0 1 0"
+selected-border-alpha = 0.85
+
+pressed-fill-alpha   = 0.24
+selection-fill-alpha = 0.34
+
+[spacing]
+scale = 1.04
+scale-with-font = true
+
+[font]
+base-size = 12
+
+[popups]
+background       = "#0c0a0b"
+background-alpha = 0.92
+text             = "#e8dcc8"
+border           = "hyprland.active-border"
+border-alpha     = 0.55
+
+[tooltip]
+background       = "#0c0a0b"
+background-alpha = 0.94
+text             = "#e8dcc8"
+border           = "hyprland.active-border-foreground"
+border-alpha     = 0.7
+
+[notifications]
+background       = "#0c0a0b"
+background-alpha = 0.90
+text             = "#e8dcc8"
+border           = "hyprland.active-border"
+border-alpha     = 0.6
+countdown        = "#d42b2b"
+
+[launcher]
+background                = "#0c0a0b"
+background-alpha          = 0.92
+text                      = "#e8dcc8"
+border                    = "hyprland.active-border-foreground"
+border-alpha              = 0.55
+scrim                     = "#050405"
+scrim-alpha               = 0.55
+selected-background       = "#e8dcc8"
+selected-background-alpha = 0.08
+selected-text             = "#d42b2b"
+selected-border           = "hyprland.active-border-foreground"
+selected-border-alpha     = 0.35
+
+[menu]
+background                = "#0c0a0b"
+background-alpha          = 0.94
+text                      = "#e8dcc8"
+border                    = "hyprland.active-border-foreground"
+border-alpha              = 0.5
+scrim                     = "#050405"
+scrim-alpha               = 0.55
+selected-background       = "#e8dcc8"
+selected-background-alpha = 0.08
+selected-text             = "#d42b2b"
+selected-border           = "hyprland.active-border-foreground"
+selected-border-alpha     = 0.35
+
+[polkit]
+background       = "#0c0a0b"
+background-alpha = 0.95
+text             = "#e8dcc8"
+text-error       = "#d42b2b"
+border           = "hyprland.active-border"
+border-error     = "#d42b2b"
+border-alpha     = 0.7
+scrim            = "#050405"
+scrim-alpha      = 0.6
+accent           = "#d42b2b"
+
+[lock]
+background       = "#0c0a0b"
+background-alpha = 0.78
+text             = "#e8dcc8"
+placeholder      = "#6b5e58"
+text-error       = "#d42b2b"
+border           = "hyprland.active-border"
+border-active    = "hyprland.active-border"
+border-error     = "#d42b2b"
+border-alpha     = 0.75
+selection        = "#d42b2b"
+selection-alpha  = 0.45
+
+[image-picker]
+scrim                   = "#050405"
+scrim-alpha             = 0.55
+text                    = "#e8dcc8"
+selected-border         = "#d42b2b"
+selected-border-alpha   = 1.0
+unselected-border       = "#e8dcc8"
+unselected-border-alpha = 0.28

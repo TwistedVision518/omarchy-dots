@@ -1,0 +1,154 @@
+{
+  "bar": {
+    "background": "glassy",
+    "layout": {
+      "center": [
+        {
+          "format": "HH:mm",
+          "formatAlt": "d MMMM 'W'ww yyyy",
+          "id": "omarchy.clock",
+          "verticalFormat": "HH\n—\nmm"
+        }
+      ],
+      "centerBegin": [
+        {
+          "cities": [
+            {
+              "name": "Kolkata",
+              "zone": "Asia/Kolkata"
+            },
+            {
+              "name": "Tokyo",
+              "zone": "Asia/Tokyo"
+            },
+            {
+              "name": "Los Angeles",
+              "zone": "America/Los_Angeles"
+            },
+            {
+              "name": "New York",
+              "zone": "America/New_York"
+            },
+            {
+              "name": "London",
+              "zone": "Europe/London"
+            }
+          ],
+          "id": "omarchy.elsewhen"
+        }
+      ],
+      "centerEnd": [
+        {
+          "id": "io.github.moneytosms.asus"
+        },
+        {
+          "id": "omarchy.system-update"
+        }
+      ],
+      "left": [
+        {
+          "iconSize": 11,
+          "id": "better-workspaces",
+          "maxIcons": 3
+        },
+        {
+          "agyPath": "/usr/bin/agy",
+          "id": "asdfsnlr.omantigravity"
+        }
+      ],
+      "right": [
+        {
+          "id": "io.github.macd2.agent-pulse"
+        },
+        {
+          "adaptiveLayout": true,
+          "albumArtSize": 16,
+          "id": "crmne.mpris",
+          "maxCharacters": 18,
+          "maxLabelWidth": 60,
+          "showAlbumArt": true,
+          "showArtist": false,
+          "showControls": false,
+          "showVisualizer": true
+        },
+        {
+          "id": "omarchy.tray"
+        },
+        {
+          "id": "omarchy.bluetooth"
+        },
+        {
+          "id": "omarchy.audio"
+        },
+        {
+          "id": "omarchy.network"
+        },
+        {
+          "id": "twistedvis.power"
+        }
+      ],
+      "tray": [
+        {
+          "id": "omarchy.monitor"
+        },
+        {
+          "id": "twistedvis.model-switcher"
+        },
+        {
+          "id": "io.github.rvcabc.logitech"
+        },
+        {
+          "id": "tinyworkshop.livewall"
+        },
+        {
+          "id": "io.github.nomanur.dotsync"
+        }
+      ]
+    },
+    "position": "top"
+  },
+  "cloneSourceRestores": [
+    "alanfortlink.clipboard",
+    "io.github.sirjul1337.lock-explorer",
+    "io.github.tarik-lotfy.liquid-media"
+  ],
+  "disabledPlugins": [
+    "omarchy.clipboard",
+    "omarchy.disk-speedtest",
+    "omarchy.nightlight",
+    "omarchy.reminders",
+    "omarchy.lock",
+    "omarchy.media"
+  ],
+  "idle": {
+    "lock": 300,
+    "screensaver": 150
+  },
+  "plugins": [
+    {
+      "id": "io.github.maajix.spotlight"
+    },
+    {
+      "id": "io.github.sh3nron.aura-blur"
+    },
+    {
+      "id": "alanfortlink.clipboard"
+    },
+    {
+      "id": "io.github.sirjul1337.lock-explorer"
+    },
+    {
+      "id": "b.okomart"
+    },
+    {
+      "id": "io.github.pablo-merino.altswitch"
+    },
+    {
+      "id": "taxin.cursor-style"
+    },
+    {
+      "id": "io.github.aonatsky.zen-sync"
+    }
+  ],
+  "version": 1
+}
