@@ -49,6 +49,7 @@
 hl.config({
   input = {
     kb_options = "",
+    accel_profile = "flat",
   },
 })
 
